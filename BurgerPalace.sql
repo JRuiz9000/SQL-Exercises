@@ -1,3 +1,4 @@
+/*My Solution*/
 create table BurgerPalace (Category char, NameofDish char, Price$ double);
 insert into BurgerPalace values (’Appetizer’,’Mini Tacos’,8.75);
 insert into BurgerPalace values (’Soup’,’Chicken Noodle Soup’,7.75);
@@ -30,7 +31,7 @@ To switch back to command prompt output mode, do
 /*ABS(30-Total1) < ANY (SELECT Table2.NameofDish 
                       FROM BurgerPalace Table2 
 					  WHERE Table2.ABS(30-Total1));*/
-/*Tsai Answer*/
+/*Prof. Tsai Alternate Answer*/
 SELECT Table1.Category, Table1.NameofDish, Table2.Category, Table2.NameofDish, Table1.Price$ + Table2.Price$ AS Total1
 FROM BurgerPalace Table1, BurgerPalace Table2
 WHERE Table1.Category = ’Entrée’ AND Table2.Category != ’Entrée’ AND Total1 <= 30
